@@ -68,15 +68,22 @@ struct CD {
     }
 
     void loadFromTextFile(FILE* file) {
-        fgets(title, 100, file); title[strcspn(title, "\n")] = 0;
-        fgets(artist, 100, file); artist[strcspn(artist, "\n")] = 0;
+        fgets(title, 100, file); 
+        title[strcspn(title, "\n")] = 0;
+        fgets(artist, 100, file); 
+        artist[strcspn(artist, "\n")] = 0;
         fscanf_s(file, "%d %lf %d\n", &year, &price, &isRented);
         if (isRented == 1) {
-            fgets(rental.fullName, 100, file); rental.fullName[strcspn(rental.fullName, "\n")] = 0;
-            fgets(rental.address, 100, file); rental.address[strcspn(rental.address, "\n")] = 0;
-            fgets(rental.phone, 20, file); rental.phone[strcspn(rental.phone, "\n")] = 0;
-            fgets(rental.rentDate, 20, file); rental.rentDate[strcspn(rental.rentDate, "\n")] = 0;
-            fgets(rental.returnDate, 20, file); rental.returnDate[strcspn(rental.returnDate, "\n")] = 0;
+            fgets(rental.fullName, 100, file); 
+            rental.fullName[strcspn(rental.fullName, "\n")] = 0;
+            fgets(rental.address, 100, file); 
+            rental.address[strcspn(rental.address, "\n")] = 0;
+            fgets(rental.phone, 20, file); 
+            rental.phone[strcspn(rental.phone, "\n")] = 0;
+            fgets(rental.rentDate, 20, file); 
+            rental.rentDate[strcspn(rental.rentDate, "\n")] = 0;
+            fgets(rental.returnDate, 20, file); 
+            rental.returnDate[strcspn(rental.returnDate, "\n")] = 0;
         }
     }
 };
