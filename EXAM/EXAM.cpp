@@ -25,7 +25,6 @@ int main() {
         fclose(file);
     }
 #endif
-
     int menu = 0;
     CD temp_cd;
     char temp[100];
@@ -139,7 +138,6 @@ int main() {
             cout << "Invalid option!\n";
         }
     } while (menu != 0);
-
     fopen_s(&file, "cd_store.txt", "w");
     if (file != nullptr) {
         fprintf(file, "%d\n", NCDs);
